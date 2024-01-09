@@ -143,7 +143,7 @@ app.get('/players/:playerId/playerScores', async (request, response) => {
   player_details.player_id AS playerId,
   player_details.player_name AS playerName,
   SUM(player_match_score.score) AS totalScore,
-  SUM(fours) AS totalFours,g
+  SUM(fours) AS totalFours,
   SUM(sixes) AS totalSixes
   FROM player_details 
     INNER JOIN player_match_score
